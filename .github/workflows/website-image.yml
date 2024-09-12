@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Shorten sha
         run: echo "sha=${sha::7}" >> $GITHUB_ENV
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
       - name: Generate files hash
         id: files-hash
         run: |
@@ -46,7 +46,7 @@ jobs:
           echo "DIR_HASH=$DIR_HASH${{ env.BUILD_ARM == 'true' && '-arm' || '' }}" >> $GITHUB_ENV
       - name: Setup Docker metadata
         id: dockerMetadata
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v5.5.0
         with:
           images: ${{ env.DOCKER_IMAGE_NAME }}
           tags: |

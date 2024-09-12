@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4.1.6
       - name: Set up Node.js
-        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8
+        uses: actions/setup-node@97ca147735c170fb35096b39ef17a0fc5d9270ac
         with:
           node-version-file: ./docs/.nvmrc
       - name: Install Dependencies
